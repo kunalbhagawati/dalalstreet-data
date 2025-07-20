@@ -77,13 +77,13 @@ print(q['priceInfo'])
 ## Command line interface
 
 ```
-$ jdata stock --help
+$ dalalstreet stock --help
 
-Usage: jdata stock [OPTIONS]
+Usage: dalalstreet stock [OPTIONS]
 
   Download historical stock data
 
-  $jdata stock --symbol STOCK1 -f yyyy-mm-dd -t yyyy-mm-dd --o file_name.csv
+  $dalalstreet stock --symbol STOCK1 -f yyyy-mm-dd -t yyyy-mm-dd --o file_name.csv
 
 Options:
   -s, --symbol TEXT  [required]
@@ -95,7 +95,7 @@ Options:
 ```
 
 ```
-$ jdata stock -s SBIN -f 2020-01-01 -t 2020-01-31 -o SBIN-Jan.csv
+$ dalalstreet stock -s SBIN -f 2020-01-01 -t 2020-01-31 -o SBIN-Jan.csv
 SBIN  [####################################]  100%
 
 Saved file to : SBIN-Jan.csv
@@ -104,26 +104,26 @@ Saved file to : SBIN-Jan.csv
 ## Download historical derivatives (F&O) data
 
 ```
-$ jdata deriviatives --help
+$ dalalstreet deriviatives --help
 Usage: cli.py derivatives [OPTIONS]
 
   Sample usage-
 
   Download stock futures-
 
-  jdata derivatives -s SBIN -f 2020-01-01 -t 2020-01-30 -e 2020-01-30 -i FUTSTK -o file_name.csv
+  dalalstreet derivatives -s SBIN -f 2020-01-01 -t 2020-01-30 -e 2020-01-30 -i FUTSTK -o file_name.csv
 
   Download index futures-
 
-  jdata derivatives -s NIFTY -f 2020-01-01 -t 2020-01-30 -e 2020-01-30 -i FUTIDX -o file_name.csv
+  dalalstreet derivatives -s NIFTY -f 2020-01-01 -t 2020-01-30 -e 2020-01-30 -i FUTIDX -o file_name.csv
 
   Download stock options-
 
-  jdata derivatives -s SBIN -f 2020-01-01 -t 2020-01-30 -e 2020-01-30 -i OPTSTK -p 330 --ce -o file_name.csv
+  dalalstreet derivatives -s SBIN -f 2020-01-01 -t 2020-01-30 -e 2020-01-30 -i OPTSTK -p 330 --ce -o file_name.csv
 
   Download index options-
 
-  jdata derivatives -s NIFTY -f 2020-01-01 -t 2020-01-30 -e 2020-01-23 -i OPTIDX -p 11000 --pe -o file_name.csv
+  dalalstreet derivatives -s NIFTY -f 2020-01-01 -t 2020-01-30 -e 2020-01-23 -i OPTIDX -p 11000 --pe -o file_name.csv
 
 Options:
   -s, --symbol TEXT  Stock/Index symbol  [required]

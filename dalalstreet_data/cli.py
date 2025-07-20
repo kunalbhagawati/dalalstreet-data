@@ -37,15 +37,15 @@ def bhavcopy(from_, to, dest, fo, idx, full):
 
     Download today's bhavcopy
 
-    $ jdata bhavcopy -d /path/to/dir
+    $ dalalstreet bhavcopy -d /path/to/dir
 
     Download bhavcopy for a date
 
-    $ jdata bhavcopy -d /path/to/dir -f 2020-01-01
+    $ dalalstreet bhavcopy -d /path/to/dir -f 2020-01-01
 
     Downlad bhavcopy for a date range
 
-    $ jdata bhavcopy -d /path/to/dir -f 2020-01-01 -t 2020-02-01
+    $ dalalstreet bhavcopy -d /path/to/dir -f 2020-01-01 -t 2020-02-01
 
     """
 
@@ -127,7 +127,7 @@ def stock(symbol, from_, to, series, output):
     """Download historical stock data
 
 
-    $jdata stock --symbol STOCK1 -f yyyy-mm-dd -t yyyy-mm-dd -o file_name.csv
+    $dalalstreet stock --symbol STOCK1 -f yyyy-mm-dd -t yyyy-mm-dd -o file_name.csv
     """
     import traceback
 
@@ -150,7 +150,7 @@ def index(symbol, from_, to, output):
     """Download historical index data
 
 
-    $jdata index --symbol "NIFTY 50" -f yyyy-mm-dd -t yyyy-mm-dd -o file_name.csv
+    $dalalstreet index --symbol "NIFTY 50" -f yyyy-mm-dd -t yyyy-mm-dd -o file_name.csv
     """
     import traceback
 
@@ -184,22 +184,22 @@ def stock(symbol, from_, to, expiry, instru, price, ce, output):
     Download stock futures-
 
     \b
-    jdata derivatives -s SBIN -f 2020-01-01 -t 2020-01-30 -e 2020-01-30 -i FUTSTK -o file_name.csv
+    dalalstreet derivatives -s SBIN -f 2020-01-01 -t 2020-01-30 -e 2020-01-30 -i FUTSTK -o file_name.csv
 
     Download index futures-
 
     \b
-    jdata derivatives -s NIFTY -f 2020-01-01 -t 2020-01-30 -e 2020-01-30 -i FUTIDX -o file_name.csv
+    dalalstreet derivatives -s NIFTY -f 2020-01-01 -t 2020-01-30 -e 2020-01-30 -i FUTIDX -o file_name.csv
 
     Download stock options-
 
     \b
-    jdata derivatives -s SBIN -f 2020-01-01 -t 2020-01-30 -e 2020-01-30 -i OPTSTK -p 330 --ce -o file_name.csv
+    dalalstreet derivatives -s SBIN -f 2020-01-01 -t 2020-01-30 -e 2020-01-30 -i OPTSTK -p 330 --ce -o file_name.csv
 
     Download index options-
 
     \b
-    jdata derivatives -s NIFTY -f 2020-01-01 -t 2020-01-30 -e 2020-01-23 -i OPTIDX -p 11000 --pe -o file_name.csv
+    dalalstreet derivatives -s NIFTY -f 2020-01-01 -t 2020-01-30 -e 2020-01-23 -i OPTIDX -p 11000 --pe -o file_name.csv
 
 
     """

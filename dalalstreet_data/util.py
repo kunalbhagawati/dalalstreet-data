@@ -17,6 +17,7 @@ try:
 except:
     np = None
 
+
 def np_exception(function):
     def wrapper(*args, **kwargs):
         if not np:
@@ -25,12 +26,14 @@ def np_exception(function):
 
     return wrapper
 
+
 @np_exception
 def np_float(num):
     try:
         return np.float64(num)
     except:
         return np.nan
+
 
 @np_exception
 def np_date(dt):
@@ -51,11 +54,9 @@ def np_date(dt):
     except:
         pass
 
+    return np.datetime64("nat")
 
 
-    return np.datetime64('nat') 
-
-    
 @np_exception
 def np_int(num):
     try:
@@ -63,13 +64,14 @@ def np_int(num):
     except:
         return 0
 
+
 def break_dates(from_date, to_date):
     if from_date.replace(day=1) == to_date.replace(day=1):
         return [(from_date, to_date)]
     date_ranges = []
     month_start = from_date
     month_end = month_start.replace(day=calendar.monthrange(month_start.year, from_date.month)[1])
-    while(month_end < to_date):
+    while month_end < to_date:
         date_ranges.append((month_start, month_end))
         month_start = month_end + timedelta(days=1)
         month_end = month_start.replace(day=calendar.monthrange(month_start.year, month_start.month)[1])
@@ -83,15 +85,15 @@ def kw_to_fname(**kw):
     return name
 
 
-
 def cached(app_name):
     """
-        Note to self:
-            This is a russian doll
-            wrapper - actual caching mechanism
-            _cached - actual decorator
-            cached - wrapper around decorator to make 'app_name' dynamic
+    Note to self:
+        This is a russian doll
+        wrapper - actual caching mechanism
+        _cached - actual decorator
+        cached - wrapper around decorator to make 'app_name' dynamic
     """
+
     def _cached(function):
         def wrapper(*args, **kw):
             kw.update(zip(function.__code__.co_varnames, args))
@@ -103,17 +105,19 @@ def cached(app_name):
 
             file_name = kw_to_fname(**kw)
             path = os.path.join(cache_dir, file_name)
-            if not os.path.isfile(path):    
+            if not os.path.isfile(path):
                 if not os.path.exists(cache_dir):
                     os.makedirs(cache_dir)
                 j = function(**kw)
-                with open(path, 'wb') as fp:
-                    pickle.dump(j, fp)        
+                with open(path, "wb") as fp:
+                    pickle.dump(j, fp)
             else:
-                with open(path, 'rb') as fp:
+                with open(path, "rb") as fp:
                     j = pickle.load(fp)
             return j
+
         return wrapper
+
     return _cached
 
 
@@ -127,9 +131,10 @@ def pool(function, params, use_threads=True, max_workers=2):
             try:
                 r = function(*param)
             except:
-                raise 
+                raise
             dfs.append(r)
     return dfs
+
 
 def live_cache(app_name):
     """Caches the output for time_out specified. This is done in order to
@@ -152,26 +157,26 @@ def live_cache(app_name):
             return val
 
     """
+
     def wrapper(self, *args, **kwargs):
         """Wrapper function which calls the function only after the timeout,
         otherwise returns value from the cache.
 
         """
         # Get key by just concating the list of args and kwargs values and hope
-        # that it does not break the code :P 
-        inputs =  [str(a) for a in args] + [str(kwargs[k]) for k in kwargs]
-        key = app_name.__name__ + '-'.join(inputs)
+        # that it does not break the code :P
+        inputs = [str(a) for a in args] + [str(kwargs[k]) for k in kwargs]
+        key = app_name.__name__ + "-".join(inputs)
         now = datetime.now()
         time_out = self.time_out
         try:
             cache_obj = self._cache[key]
-            if now - cache_obj['timestamp'] < timedelta(seconds=time_out):
-                return cache_obj['value']
+            if now - cache_obj["timestamp"] < timedelta(seconds=time_out):
+                return cache_obj["value"]
         except:
             self._cache = {}
         value = app_name(self, *args, **kwargs)
-        self._cache[key] = {'value': value, 'timestamp': now}
+        self._cache[key] = {"value": value, "timestamp": now}
         return value
 
-    return wrapper 
-
+    return wrapper

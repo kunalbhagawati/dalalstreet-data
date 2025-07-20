@@ -1,4 +1,4 @@
-from jugaad_data.rbi import RBI
+from dalalstreet_data.rbi import RBI
 import pytest
 
 def test_current_rates():

@@ -3,7 +3,7 @@ import click
 from datetime import date, datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor
 import requests
-from jugaad_data import nse
+from dalalstreet_data import nse
 
 
 
@@ -210,5 +210,3 @@ def stock(symbol, from_, to, expiry, instru, price, ce, output):
 
 if __name__ == "__main__":
     cli()
-
-

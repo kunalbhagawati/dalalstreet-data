@@ -18,7 +18,7 @@ try:
 except:
     pd = None
 
-from jugaad_data import util as ut
+from dalalstreet_data import util as ut
 from .archives import (bhavcopy_raw, bhavcopy_save, 
                         full_bhavcopy_raw, full_bhavcopy_save,
                         bhavcopy_fo_raw, bhavcopy_fo_save,
@@ -384,4 +384,3 @@ def index_pe_df(symbol, from_date, to_date):
     for col, dtype in index_dtypes.items():
         df[col] = df[col].apply(dtype)
     return df
-

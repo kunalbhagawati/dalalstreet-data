@@ -1,14 +1,8 @@
 > Forked from https://github.com/jugaad-py/jugaad-data (https://pypi.org/project/jugaad-data/)
 
-# Documentation
-
-https://marketsetup.in/documentation/jugaad-data/
-
 # Introduction
 
-`jugaad-data` is a python library to download historical/live stock, index as well as economic data from NSE and RBI website using.
-
-![Build Badge](https://github.com/jugaad-py/jugaad-data/actions/workflows/run-tests.yml/badge.svg)
+`dalalstreet-data` is a python library to download historical/live stock, index as well as economic data from NSE and RBI website using.
 
 
 # Features
@@ -28,35 +22,33 @@ https://marketsetup.in/documentation/jugaad-data/
 | NSE      | Index F&O  | Yes        |
 | RBI	   | Current Rates| Yes |
 
-# Installation
-
-`pip install jugaad-data` 
-
 # Getting started
 
-## Python inteface
+## Python interface
 
 ### Historical data
 
 ```python
 from datetime import date
-from jugaad_data.nse import bhavcopy_save, bhavcopy_fo_save
+from dalalstreet_data.nse import bhavcopy_save, bhavcopy_fo_save
 
 # Download bhavcopy
-bhavcopy_save(date(2020,1,1), "/path/to/directory")
+bhavcopy_save(date(2020, 1, 1), "/path/to/directory")
 
 # Download bhavcopy for futures and options
-bhavcopy_fo_save(date(2020,1,1), "/path/to/directory")
+bhavcopy_fo_save(date(2020, 1, 1), "/path/to/directory")
 
 # Download stock data to pandas dataframe
-from jugaad_data.nse import stock_df
-df = stock_df(symbol="SBIN", from_date=date(2020,1,1),
-            to_date=date(2020,1,30), series="EQ")
+from dalalstreet_data.nse import stock_df
+
+df = stock_df(symbol="SBIN", from_date=date(2020, 1, 1),
+              to_date=date(2020, 1, 30), series="EQ")
 ```
 ### Live data
 
 ```python
-from jugaad_data.nse import NSELive
+from dalalstreet_data.nse import NSELive
+
 n = NSELive()
 q = n.stock_quote("HDFC")
 print(q['priceInfo'])

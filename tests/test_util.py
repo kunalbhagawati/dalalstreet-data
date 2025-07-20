@@ -2,7 +2,7 @@ import os
 import math
 import pickle
 import pytest
-from jugaad_data import util as ut
+from dalalstreet_data import util as ut
 from datetime import date, datetime, timedelta
 import time
 from pyfakefs.fake_filesystem_unittest import TestCase
@@ -164,4 +164,3 @@ def test_live_cache():
     assert q.rt_quote() == v
     time.sleep(3)
     assert q.rt_quote() > v
- 

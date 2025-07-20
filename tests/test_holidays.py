@@ -1,5 +1,5 @@
 from datetime import date
-from jugaad_data.holidays import holidays
+from dalalstreet_data.holidays import holidays
 
 
 def test_holidays():

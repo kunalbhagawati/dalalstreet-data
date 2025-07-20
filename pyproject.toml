@@ -3,25 +3,24 @@ requires = ["setuptools >= 61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "jugaad-data"
+name = "dalalstreet-data"
 version = "0.27"
 requires-python = ">= 3.6"
-authors = [{"name"= "jugaad-coder", "email"="abc@xyz.com"}]
+#authors = [{"name"= "jugaad-coder", "email"="abc@xyz.com"}] # original authors
+authors = [{ "name" = "knl.bhg@gmail.com", "email" = "knl.bhg@gmail.com" }, { "name" = "sbvamsi@gmail.com", "email" = "sbvamsi@gmail.com" }]
 description = "Free Zerodha API python library"
 readme = "README.md"
-license = {file = "LICENSE.YOLO.md"}
+license = { file = "LICENSE.YOLO.md" }
 keywords = ["NSE", "Live", "Bhavcopy", "History", "Futures", "Options", "Stock Data"]
 dynamic = ["dependencies"]
 
 
 [project.scripts]
-jdata = "jugaad_data.cli:cli"
+dalalstreet = "dalalstreet_data.cli:cli"
 
 [project.urls]
-Homepage = "https://marketsetup.in/documentation/jugaad-data/"
-Documentation = "https://marketsetup.in/documentation/jugaad-data/"
-Repository = "https://github.com/jugaad-py/jugaad-data"
-Issues = "https://github.com/jugaad-py/jugaad-data/issues"
+Repository = "https://github.com/kunalbhagawati/dalalstreet-data"
+Issues = "https://github.com/kunalbhagawati/dalalstreet-data/issues"
 
 [tool.setuptools.dynamic]
-dependencies = {file = ["requirements.txt"]}
+dependencies = { file = ["requirements.txt"] }

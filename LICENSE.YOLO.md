@@ -7,6 +7,6 @@ TROUBLE HERE ARE SOME OTHER BUZZWORDS COMMONLY IN THESE THINGS WARRANTIES
 LIABILITY CONTRACT TORT LIABLE CLAIMS RESTRICTION MERCHANTABILITY. NOW HERE'S
 THE REAL LICENSE:
 
-0. jugaad-data is in public domain.
+0. dalalstreet-data is in public domain.
 1. Do whatever you want with it.
 2. Stop emailing me about it!

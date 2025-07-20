@@ -1,3 +1,5 @@
+> Forked from https://github.com/jugaad-py/jugaad-data (https://pypi.org/project/jugaad-data/)
+
 # Documentation
 
 https://marketsetup.in/documentation/jugaad-data/
@@ -146,9 +148,3 @@ Options:
   -o, --output TEXT  Full path of output file
   --help             Show this message and exit.
 ```
-
-## Buy me a coffee
-
-If my work has helped you in anyway, you can buy me a coffee 
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/Jugaader)

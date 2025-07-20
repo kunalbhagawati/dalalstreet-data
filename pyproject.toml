@@ -22,6 +22,8 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
+    "ipython",
+    "ruff",
     "pytest==7.1.2",
     "pytest-testmon",
     "pytest-watch",

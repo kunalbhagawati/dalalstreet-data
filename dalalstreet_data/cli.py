@@ -1,8 +1,9 @@
-import os
-import click
-from datetime import date, datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor
+from datetime import date, datetime, timedelta
+
+import click
 import requests
+
 from dalalstreet_data import nse
 
 
@@ -203,8 +204,6 @@ def stock(symbol, from_, to, expiry, instru, price, ce, output):
 
 
     """
-    import traceback
-    import sys
 
     from_date = datetime.strptime(from_, "%Y-%m-%d").date()
     to_date = datetime.strptime(to, "%Y-%m-%d").date()

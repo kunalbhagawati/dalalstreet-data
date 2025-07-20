@@ -1,4 +1,4 @@
-from datetime import time, date, datetime
+from datetime import datetime
 
 """
  Holiday list based on Zipline calendar library's holiday calendar

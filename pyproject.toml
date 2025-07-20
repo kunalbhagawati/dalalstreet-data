@@ -12,8 +12,24 @@ description = "Free Zerodha API python library"
 readme = "README.md"
 license = { file = "LICENSE.YOLO.md" }
 keywords = ["NSE", "Live", "Bhavcopy", "History", "Futures", "Options", "Stock Data"]
-dynamic = ["dependencies"]
 
+dependencies = [
+    "requests",
+    "click==7.1.2",
+    "appdirs==1.4.4",
+    "beautifulsoup4==4.9.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==7.1.2",
+    "pytest-testmon",
+    "pytest-watch",
+    "pyfakefs",
+    "pandas",
+    "jupyterlab",
+    "twine",
+]
 
 [project.scripts]
 dalalstreet = "dalalstreet_data.cli:cli"
@@ -22,5 +38,3 @@ dalalstreet = "dalalstreet_data.cli:cli"
 Repository = "https://github.com/kunalbhagawati/dalalstreet-data"
 Issues = "https://github.com/kunalbhagawati/dalalstreet-data/issues"
 
-[tool.setuptools.dynamic]
-dependencies = { file = ["requirements.txt"] }

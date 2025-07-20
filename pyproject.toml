@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dalalstreet-data"
-version = "1.0.0"
+version = "1.1.0"
 requires-python = ">= 3.9"
 #authors = [{"name"= "jugaad-coder", "email"="abc@xyz.com"}] # original authors
 authors = [{ "name" = "knl.bhg@gmail.com", "email" = "knl.bhg@gmail.com" }, { "name" = "sbvamsi@gmail.com", "email" = "sbvamsi@gmail.com" }]

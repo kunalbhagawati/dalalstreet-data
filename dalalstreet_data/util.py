@@ -1,16 +1,10 @@
-import os
-import collections
-import json
-import pickle
-import time
-from datetime import datetime, timedelta, date
-from concurrent.futures import ThreadPoolExecutor
-import click
-from appdirs import user_cache_dir
-
 import calendar
+import os
+import pickle
+from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime, timedelta
 
-import math
+from appdirs import user_cache_dir
 
 try:
     import numpy as np

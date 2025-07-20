@@ -2,9 +2,9 @@
 Implements live data fetch functionality
 """
 
-from datetime import datetime
 from requests import Session
-from ..util import live_cache
+
+from dalalstreet_data.util import live_cache
 
 
 class NSELive:

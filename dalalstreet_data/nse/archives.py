@@ -3,13 +3,12 @@ Implements functionality to download archival data such as Bhavcopy, bulk
 deals from NSE and NSEIndices website
 """
 
-from datetime import datetime, date
-import os
 import io
-import csv
+import os
 import zipfile
+from datetime import datetime, date
+
 import requests
-import pprint
 
 
 def unzip(function):

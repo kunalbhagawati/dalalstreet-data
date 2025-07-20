@@ -4,16 +4,13 @@ derivatives data from NSE and
 NSEIndices website
 """
 
-import os
-import json
-import itertools
 import csv
-from pprint import pprint
+import itertools
+import json
 from urllib.parse import urljoin
-from requests import Session
 
-# from bs4 import BeautifulSoup
 import click
+from requests import Session
 
 try:
     import pandas as pd
@@ -22,17 +19,6 @@ except:
     pd = None
 
 from dalalstreet_data import util as ut
-from .archives import (
-    bhavcopy_raw,
-    bhavcopy_save,
-    full_bhavcopy_raw,
-    full_bhavcopy_save,
-    bhavcopy_fo_raw,
-    bhavcopy_fo_save,
-    bhavcopy_index_raw,
-    bhavcopy_index_save,
-    expiry_dates,
-)
 
 APP_NAME = "nsehistory"
 

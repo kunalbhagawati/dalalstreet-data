@@ -111,6 +111,9 @@ celerybeat.pid
 # VsCode
 .vscode/
 
+# Intellij
+.idea/
+
 # SageMath parsed files
 *.sage.py
 
